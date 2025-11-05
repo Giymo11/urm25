@@ -1,0 +1,15 @@
+//| mill-version: 1.1.0-RC1
+
+package build
+
+import mill.*, scalalib.*
+
+object server extends ScalaModule {
+  def scalaVersion = "3.7.3"
+  def mvnDeps = Seq(
+      mvn"com.lihaoyi::upickle:4.4.1",
+      mvn"com.lihaoyi::os-lib:0.11.6",
+      mvn"com.lihaoyi::cask:0.11.3",
+      mvn"com.lihaoyi::scalatags:0.13.1"
+    )
+}

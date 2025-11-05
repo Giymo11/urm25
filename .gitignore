@@ -204,7 +204,7 @@ cython_debug/
 # Marimo
 marimo/_static/
 marimo/_lsp/
-__marimo_/
+__marimo__/
 
 
 # scala stuff
