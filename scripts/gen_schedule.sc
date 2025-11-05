@@ -30,7 +30,7 @@ def generate_nicknames(count: Int): Set[String] = {
     "sly",
     "wise"
   )
-  val animals = Seq(
+  val animals    = Seq(
     "otter",
     "fox",
     "bear",
@@ -49,7 +49,7 @@ def generate_nicknames(count: Int): Set[String] = {
   )
 
   val nicknames = for {
-    adj <- adjectives
+    adj    <- adjectives
     animal <- animals
   } yield s"$adj-$animal"
 
@@ -58,11 +58,11 @@ def generate_nicknames(count: Int): Set[String] = {
 
 def permutations(input: String): Set[String] = input.permutations.toSet
 
-val filename = "schedule.json"
-val start_date = "2025-11-07"
-val num_subjects = 20
-val patterns = Seq("AABBB", "AAABB")
-val assignment_desc = "All unique permutations of AABBB (10) and AAABB (10), one per subject."
+val filename         = "schedule.json"
+val start_date       = "2025-11-07"
+val num_subjects     = 20
+val patterns         = Seq("AABBB", "AAABB")
+val assignment_desc  = "All unique permutations of AABBB (10) and AAABB (10), one per subject."
 val all_permutations = patterns.flatMap(permutations).toSet
 
 // assert we have the right number of unique permutations
@@ -80,13 +80,13 @@ for day <- 0 until 5 do
 case class SubjectSchedule(nickname: String, pattern: String, start_date: String) derives ReadWriter
 
 val nicknames = generate_nicknames(num_subjects).toSeq
-val schedules = nicknames.zip(all_permutations.toSeq).map {
-  case (nickname, pattern) => SubjectSchedule(nickname, pattern, start_date)
+val schedules = nicknames.zip(all_permutations.toSeq).map { case (nickname, pattern) =>
+  SubjectSchedule(nickname, pattern, start_date)
 }
 // json include assignment description
 case class ScheduleFile(assignment_description: String, schedules: Seq[SubjectSchedule]) derives ReadWriter
 
 val schedule_file = ScheduleFile(assignment_desc, schedules)
-val json = write(schedule_file, indent = 4)
+val json          = write(schedule_file, indent = 4)
 os.write.over(os.pwd / filename, json)
 println(s"Generated schedule for $num_subjects subjects and wrote to $filename")
