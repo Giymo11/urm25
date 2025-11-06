@@ -14,4 +14,10 @@ to start the server, run:
 ```
 then open your browser at http://localhost:8080
 
+# Planned:
+
+- HTMX for interaction
+- /api route for setting/retriving state
+- json file for state
+
 

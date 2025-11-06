@@ -1,5 +1,7 @@
 package server
 
+import upickle.default.*
+
 enum Event(val message: String):
   case Access(resource: String) extends Event(s"Access:$resource")
   case StartTracking            extends Event("StartTracking")
@@ -22,3 +24,12 @@ object Util {
     }
   }
 }
+
+
+// create json for server to load
+case class SubjectSchedule(nickname: String, pattern: String, start_date: String) derives ReadWriter
+
+// json include assignment description
+case class ScheduleFile(assignment_description: String, schedules: Seq[SubjectSchedule]) derives ReadWriter
+
+
