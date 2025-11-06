@@ -2,104 +2,104 @@
     "assignment_description": "All unique permutations of AABBB (10) and AAABB (10), one per subject.",
     "schedules": [
         {
-            "nickname": "mighty-eagle",
+            "nickname": "brave-bear",
             "pattern": "AABBA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "fierce-wolf",
+            "nickname": "curious-dolphin",
             "pattern": "BBBAA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "noble-panda",
+            "nickname": "gentle-lion",
             "pattern": "BAABA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "brave-whale",
+            "nickname": "lively-otter",
             "pattern": "BBAAA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "wise-bear",
+            "nickname": "gentle-dolphin",
             "pattern": "BABBA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "proud-deer",
+            "nickname": "proud-bear",
             "pattern": "ABAAB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "happy-fox",
+            "nickname": "gentle-eagle",
             "pattern": "BABAA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "kind-tiger",
+            "nickname": "mighty-fox",
             "pattern": "BBAAB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "kind-deer",
+            "nickname": "noble-tiger",
             "pattern": "BAAAB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "eager-tiger",
+            "nickname": "wise-otter",
             "pattern": "BBABA",
-            "start_date": "2025-11-07"
-        },
-        {
-            "nickname": "quick-rabbit",
-            "pattern": "BABAB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
             "nickname": "brave-eagle",
+            "pattern": "BABAB",
+            "start_date": "2025-11-14T03:00:00Z"
+        },
+        {
+            "nickname": "quick-shark",
             "pattern": "BAABB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "kind-koala",
+            "nickname": "lively-rabbit",
             "pattern": "AABBB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "kind-rabbit",
+            "nickname": "fierce-lion",
             "pattern": "ABBAA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "jolly-shark",
+            "nickname": "fierce-wolf",
             "pattern": "AABAB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "sly-bear",
+            "nickname": "quick-bear",
             "pattern": "ABBAB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "happy-lion",
+            "nickname": "wise-hawk",
             "pattern": "ABABA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "gentle-wolf",
+            "nickname": "proud-panda",
             "pattern": "AAABB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "noble-eagle",
+            "nickname": "curious-lion",
             "pattern": "ABABB",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         },
         {
-            "nickname": "gentle-bear",
+            "nickname": "kind-lion",
             "pattern": "ABBBA",
-            "start_date": "2025-11-07"
+            "start_date": "2025-11-14T03:00:00Z"
         }
     ]
 }

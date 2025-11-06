@@ -7,6 +7,7 @@
 // it is all unique permutations of AABBB and AAABB (10 each)
 // and assign them to subject nicknames in the format of 'brave-otter'
 
+import java.time.*
 import mainargs.*
 import upickle.default.*
 
@@ -58,8 +59,17 @@ def generate_nicknames(count: Int): Set[String] = {
 
 def permutations(input: String): Set[String] = input.permutations.toSet
 
+def parseTimestamp(datestr: String): Instant = {
+  val dateTimeFormat = format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+  val localTs = LocalDateTime.parse(datestr, dateTimeFormat)
+  localTs.atZone(ZoneId.systemDefault()).toInstant
+}
+
+
 val filename         = "schedule.json"
-val start_date       = "2025-11-07"
+// start date with timezone, starting at 4 AM
+val start_date       = "2025-11-14 04:00" 
+val start_timestamp =  parseTimestamp(start_date).toString
 val num_subjects     = 20
 val patterns         = Seq("AABBB", "AAABB")
 val assignment_desc  = "All unique permutations of AABBB (10) and AAABB (10), one per subject."
@@ -81,7 +91,7 @@ case class SubjectSchedule(nickname: String, pattern: String, start_date: String
 
 val nicknames = generate_nicknames(num_subjects).toSeq
 val schedules = nicknames.zip(all_permutations.toSeq).map { case (nickname, pattern) =>
-  SubjectSchedule(nickname, pattern, start_date)
+  SubjectSchedule(nickname, pattern, start_timestamp)
 }
 // json include assignment description
 case class ScheduleFile(assignment_description: String, schedules: Seq[SubjectSchedule]) derives ReadWriter
