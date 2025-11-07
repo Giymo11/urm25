@@ -29,24 +29,23 @@ object Util {
     }
   }
 
-  }
-
+}
 
 // create json for server to load
 case class SubjectSchedule(nickname: String, pattern: String, start_date: String) derives ReadWriter {
-  def daysAfterStart: Long = 
+  def daysAfterStart: Long =
     Duration.between(Instant.now(), Instant.parse(start_date)).toDays
-    
-  def isWithinAccessPeriod: Boolean = 
+
+  def isWithinAccessPeriod: Boolean =
     daysAfterStart >= 0 && daysAfterStart < 5
 
-  def currentCondition: Option[String] = 
+  def currentCondition: Option[String] =
     if isWithinAccessPeriod then Some(pattern(daysAfterStart.toInt).toString) else None
-} 
+}
 
 // json include assignment description
 case class ScheduleFile(assignment_description: String, schedules: Seq[SubjectSchedule]) derives ReadWriter
 
 // value of None for tracking_timestamp means currently not tracking)
-case class ParticipantState(nickname: String, current_condition: String, tracking_timestamp: Option[String]) derives ReadWriter
-
+case class ParticipantState(nickname: String, current_condition: String, tracking_timestamp: Option[String])
+    derives ReadWriter

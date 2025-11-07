@@ -10,7 +10,6 @@
 import java.time.*
 import mainargs.*
 import upickle.default.*
-
 import scala.util.Random
 
 def generate_nicknames(count: Int): Set[String] = {
@@ -57,23 +56,20 @@ def generate_nicknames(count: Int): Set[String] = {
   Random.shuffle(nicknames).take(count).toSet
 }
 
-def permutations(input: String): Set[String] = input.permutations.toSet
-
 def parseTimestamp(datestr: String): Instant = {
   val dateTimeFormat = format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
-  val localTs = LocalDateTime.parse(datestr, dateTimeFormat)
+  val localTs        = LocalDateTime.parse(datestr, dateTimeFormat)
   localTs.atZone(ZoneId.systemDefault()).toInstant
 }
 
-
 val filename         = "schedule.json"
-// start date with timezone, starting at 4 AM
-val start_date       = "2025-11-14 04:00" 
-val start_timestamp =  parseTimestamp(start_date).toString
+// start date, starting at 4 AM
+val start_date       = "2025-11-14 04:00"
+val start_timestamp  = parseTimestamp(start_date).toString
 val num_subjects     = 20
 val patterns         = Seq("AABBB", "AAABB")
 val assignment_desc  = "All unique permutations of AABBB (10) and AAABB (10), one per subject."
-val all_permutations = patterns.flatMap(permutations).toSet
+val all_permutations = patterns.flatMap(_.permutations).toSet
 
 // assert we have the right number of unique permutations
 assert(
@@ -93,10 +89,9 @@ val nicknames = generate_nicknames(num_subjects).toSeq
 val schedules = nicknames.zip(all_permutations.toSeq).map { case (nickname, pattern) =>
   SubjectSchedule(nickname, pattern, start_timestamp)
 }
-// json include assignment description
+// json includes assignment description
 case class ScheduleFile(assignment_description: String, schedules: Seq[SubjectSchedule]) derives ReadWriter
 
-val schedule_file = ScheduleFile(assignment_desc, schedules)
-val json          = write(schedule_file, indent = 4)
+val json = write(ScheduleFile(assignment_desc, schedules), indent = 4)
 os.write.over(os.pwd / filename, json)
 println(s"Generated schedule for $num_subjects subjects and wrote to $filename")
