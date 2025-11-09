@@ -5,7 +5,7 @@ import java.time.*
 import cask.*
 
 import Util.*
-import ValidEvent.*
+import AccessSuccess.*, AccessError.*
 
 object UrmServer extends cask.MainRoutes {
   override def host = "0.0.0.0"
@@ -24,58 +24,76 @@ object UrmServer extends cask.MainRoutes {
     mutable.HashMap().withDefault(userId => ParticipantState(userId, "", None))
 
   @cask.get("/")
-  def index() = {
-    logEvent(Access("/"), "anonymous")
+  def index() =
+    Access("/").logEvent()
     "Welcome to URM Server!"
-  }
+
+  def userInvalidResponse(endpoint: String, userId: String) =
+    Access(endpoint).logEvent(userId)
+    InvalidUser(userId).toResponse
+
+  def timeInvalidResponse(endpoint: String, userId: String) =
+    Access(endpoint).logEvent(userId)
+    InvalidTime(Instant.now()).toResponse
+
+  def userResponse(path: String, userId: String, func: SubjectSchedule => cask.Response[String]) =
+    Access(path).logEvent(userId)
+    schedules.get(userId) match {
+      case Some(schedule) if schedule.isWithinAccessPeriod => func(schedule)
+      case Some(_)                                         => InvalidTime(Instant.now()).toResponse
+      case None                                            => InvalidUser(userId).toResponse
+    }
+
+  def conditionResponse(path: String, userId: String, func: (String, ParticipantState) => cask.Response[String]) =
+    val respFunc = (schedule: SubjectSchedule) =>
+      schedule.currentCondition match {
+        case Some(cond) => func(cond, participantState(userId))
+        case None       => InvalidTime(Instant.now()).toResponse
+      }
+    userResponse(path, userId, respFunc)
 
   @cask.get("/p/:userId")
   def serve(userId: String) =
-    schedules.get(userId) match {
-      case Some(schedule) if schedule.isWithinAccessPeriod =>
-        logEvent(Access("/p/"), userId)
-        val msg = upickle.default.write(schedule)
-        cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
-      case Some(_)                                         =>
-        logEvent(Access("/p/"), s"TIME_INVALID:$userId")
-        val msg = "<!doctype html><h1>403</h1>You don't have acces (yet/anymore)."
-        cask.Response(msg, 403, Seq("Content-Type" -> "text/html; charset=utf-8"))
-      case None                                            =>
-        logEvent(Access("/p/"), s"USERID_INVALID:$userId")
-        val msg = "<!doctype html><h1>404</h1>Unknown participant ID"
-        cask.Response(msg, 404, Seq("Content-Type" -> "text/html; charset=utf-8"))
-    }
+    // TODO: load html template and fill in nickname and pattern
+    val respFunc = (schedule: SubjectSchedule) =>
+      val msg = s"Hello, ${schedule.nickname}! Your pattern is ${schedule.pattern}."
+      cask.Response(msg, 200, Seq("Content-Type" -> "text/html; charset=utf-8"))
+    userResponse("/p/userId", userId, respFunc)
 
   @cask.get("/api/:userId/state")
   def getState(userId: String) =
-    schedules.get(userId) match {
-      case Some(schedule) =>
-        logEvent(Access("/api/state/"), userId)
-        val state = participantState(userId)
-        schedule.currentCondition match {
-          case Some(cond) if cond == state.current_condition =>
-            val msg = upickle.default.write(state)
-            cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
-          case Some(cond)                                    =>
-            // if condition changed during tracking, reset it
-            if state.tracking_timestamp.isDefined then {
-              logEvent(Access("/api/state/"), s"TRACKING_AUTORESET:$userId")
-            }
-            // update condition
-            val newState = state.copy(current_condition = cond, tracking_timestamp = None)
-            participantState.update(userId, newState)
-            val msg      = upickle.default.write(newState)
-            cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
-          case None                                          =>
-            val msg = "<!doctype html><h1>403</h1>You don't have acces (yet/anymore)."
-            cask.Response(msg, 403, Seq("Content-Type" -> "text/html; charset=utf-8"))
+    val respFunc = (cond: String, state: ParticipantState) => {
+      val msg =
+        if cond == state.current_condition then upickle.default.write(state)
+        else {
+          val newState = state.copy(current_condition = cond, tracking_timestamp = None)
+          participantState.update(userId, newState)
+          upickle.default.write(newState)
         }
-      case None           =>
-        logEvent(Access("/api/state/"), s"USERID_INVALID:$userId")
-        val msg = "<!doctype html><h1>404</h1>Unknown participant ID"
-        cask.Response(msg, 404, Seq("Content-Type" -> "text/html; charset=utf-8"))
+      cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
     }
+    conditionResponse("/api/userId/state", userId, respFunc)
 
+  @cask.post("/api/:userId/start_tracking")
+  def startTracking(userId: String) =
+    // TODO: check if already tracking? if so, log error, still update
+    val respFunc = (cond: String, state: ParticipantState) => {
+      // log if already tracking
+      val wasAlreadyTracking = state.tracking_timestamp.isDefined
+      if wasAlreadyTracking then
+        Util.logMessage(s"WARN, User $userId started tracking again without stopping first.", userId)
+      StartTracking(wasAlreadyTracking).logEvent(userId)
+      // update state
+      val timestamp          = Instant.now().toString
+      val newState           = state.copy(current_condition = cond, tracking_timestamp = Some(timestamp))
+      participantState.update(userId, newState)
+      // respond with new state
+      val msg                = upickle.default.write(newState)
+      cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
+    }
+    conditionResponse("/api/userId/start_tracking", userId, respFunc)
+
+  // initialize server at the end
   initialize()
 }
 
@@ -83,3 +101,15 @@ object Config {
   val schedulePath = os.pwd / "schedule.json"
   val logfilePath  = "server.log"
 }
+
+extension (error: AccessError)
+  def toResponse: cask.Response[String] =
+    error.logEvent()
+    error match {
+      case AccessError.InvalidTime(_) =>
+        val msg = "<!doctype html><h1>403</h1>You don't have access (yet/anymore)."
+        cask.Response(msg, 403, Seq("Content-Type" -> "text/html; charset=utf-8"))
+      case AccessError.InvalidUser(_) =>
+        val msg = "<!doctype html><h1>404</h1>User not found."
+        cask.Response(msg, 404, Seq("Content-Type" -> "text/html; charset=utf-8"))
+    }

@@ -3,33 +3,47 @@ package server
 import java.time.*
 import upickle.default.*
 
-enum ValidEvent(val message: String):
-  case Access(resource: String) extends ValidEvent(s"Access:$resource")
-  case StartTracking            extends ValidEvent("StartTracking")
-  case StopTracking             extends ValidEvent("StopTracking")
+enum AccessError: // Only invalid events
+  case InvalidTime(start: Instant)
+  case InvalidUser(userId: String)
 
-enum InvalidEvent(val message: String):
-  case InvalidTime(start: Instant) extends InvalidEvent(s"INVALID_TIME:${start.toString}")
-  case InvalidUser(userId: String) extends InvalidEvent("UNKNOWN_USERID")
+enum AccessSuccess: // Only valid events
+  case Access(resource: String)
+  case StartTracking(wasTracking: Boolean)
+  case StopTracking(wasTracking: Boolean)
 
-object Util {
+type AccessEvent = AccessError | AccessSuccess
+
+extension (event: AccessEvent)
+  def logMessage: String                                = event match
+    case AccessError.InvalidTime(start)           => s"INVALID_TIME, access starts: ${start.toString}"
+    case AccessError.InvalidUser(userId)          => s"INVALID_USER, userId: $userId"
+    case AccessSuccess.Access(resource)           => s"ACCESS, resource: $resource"
+    case AccessSuccess.StartTracking(wasTracking) => s"START_TRACKING, previously tracking: $wasTracking"
+    case AccessSuccess.StopTracking(wasTracking)  => s"STOP_TRACKING, previously tracking: $wasTracking"
+  def logEvent(userId: String = "unknown"): AccessEvent =
+    Util.logEvent(event, userId)
+    event
+
+object Util:
   // logs in csv format: timestamp, userId, event
-  def logEvent(event: ValidEvent, userId: String): Unit = {
+  private def logEntry(msg: String): Unit =
     import os.*
-    // timestamp with timezone info
-    val timestamp = java.time.ZonedDateTime.now().toString
-    val logEntry  = s"$timestamp, $userId, ${event.message}\n"
-    // TODO: also log ip, ua; as well as condition, day-number
     // log using os-lib, ensure no concurrency issues
     this.synchronized {
       if !exists(pwd / Config.logfilePath) then
-        val header = "timestamp, userId, event\n"
+        val header = "timestamp, userId, event, message\n"
         write(pwd / Config.logfilePath, header, createFolders = true)
-      write.append(pwd / Config.logfilePath, logEntry)
+      write.append(pwd / Config.logfilePath, msg + "\n")
     }
-  }
 
-}
+  def logMessage(msg: String, userId: String = "unknown"): Unit =
+    // timestamp with timezone info
+    val timestamp = java.time.ZonedDateTime.now().toString
+    val logMsg    = s"$timestamp, $userId, MESSAGE, $msg"
+    logEntry(logMsg)
+
+  def logEvent(event: AccessEvent, userId: String): Unit = logMessage(event.logMessage, userId)
 
 // create json for server to load
 case class SubjectSchedule(nickname: String, pattern: String, start_date: String) derives ReadWriter {
