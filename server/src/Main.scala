@@ -28,14 +28,6 @@ object UrmServer extends cask.MainRoutes {
     Access("/").logEvent()
     "Welcome to URM Server!"
 
-  def userInvalidResponse(endpoint: String, userId: String) =
-    Access(endpoint).logEvent(userId)
-    InvalidUser(userId).toResponse
-
-  def timeInvalidResponse(endpoint: String, userId: String) =
-    Access(endpoint).logEvent(userId)
-    InvalidTime(Instant.now()).toResponse
-
   def userResponse(path: String, userId: String, func: SubjectSchedule => cask.Response[String]) =
     Access(path).logEvent(userId)
     schedules.get(userId) match {
@@ -43,14 +35,6 @@ object UrmServer extends cask.MainRoutes {
       case Some(_)                                         => InvalidTime(Instant.now()).toResponse
       case None                                            => InvalidUser(userId).toResponse
     }
-
-  def conditionResponse(path: String, userId: String, func: (String, ParticipantState) => cask.Response[String]) =
-    val respFunc = (schedule: SubjectSchedule) =>
-      schedule.currentCondition match {
-        case Some(cond) => func(cond, participantState(userId))
-        case None       => InvalidTime(Instant.now()).toResponse
-      }
-    userResponse(path, userId, respFunc)
 
   @cask.get("/p/:userId")
   def serve(userId: String) =
@@ -60,28 +44,37 @@ object UrmServer extends cask.MainRoutes {
       cask.Response(msg, 200, Seq("Content-Type" -> "text/html; charset=utf-8"))
     userResponse("/p/userId", userId, respFunc)
 
-  @cask.get("/api/:userId/state")
-  def getState(userId: String) =
-    val respFunc = (cond: String, state: ParticipantState) => {
-      val msg =
-        if cond == state.current_condition then upickle.default.write(state)
-        else {
+  def conditionResponse(path: String, userId: String, func: (String, ParticipantState) => cask.Response[String]) =
+    val respFunc = (schedule: SubjectSchedule) =>
+      schedule.currentCondition match {
+        case Some(cond) if cond != participantState(userId).current_condition => 
+          val state = participantState(userId)
+          // check if currently tracking
+          if state.tracking_timestamp.isDefined then
+            Util.logMessage(s"WARN, User $userId condition changed from ${state.current_condition} to $cond while tracking.", userId)
+          // update state
           val newState = state.copy(current_condition = cond, tracking_timestamp = None)
           participantState.update(userId, newState)
-          upickle.default.write(newState)
-        }
+          // respond with new condition
+          func(cond, participantState(userId))
+        case Some(cond) => func(cond, participantState(userId))
+        case None       => InvalidTime(Instant.now()).toResponse
+      }
+    userResponse(path, userId, respFunc)
+
+  @cask.get("/api/:userId/state")
+  def getState(userId: String) =
+    val respFunc = (condition: String, state: ParticipantState) => 
+      val msg = upickle.default.write(state)
       cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
-    }
     conditionResponse("/api/userId/state", userId, respFunc)
 
   @cask.post("/api/:userId/start_tracking")
-  def startTracking(userId: String) =
-    // TODO: check if already tracking? if so, log error, still update
+  def startTracking(userId: String) = 
     val respFunc = (cond: String, state: ParticipantState) => {
       // log if already tracking
       val wasAlreadyTracking = state.tracking_timestamp.isDefined
-      if wasAlreadyTracking then
-        Util.logMessage(s"WARN, User $userId started tracking again without stopping first.", userId)
+      if wasAlreadyTracking then Util.logMessage(s"WARN, User $userId started tracking again without stopping first.", userId)
       StartTracking(wasAlreadyTracking).logEvent(userId)
       // update state
       val timestamp          = Instant.now().toString
@@ -92,6 +85,22 @@ object UrmServer extends cask.MainRoutes {
       cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
     }
     conditionResponse("/api/userId/start_tracking", userId, respFunc)
+
+  @cask.post("/api/:userId/stop_tracking")
+  def stopTracking(userId: String) = 
+    val respFunc = (cond: String, state: ParticipantState) => {
+      // log if not tracking
+      val wasAlreadyTracking = state.tracking_timestamp.isDefined
+      if !wasAlreadyTracking then Util.logMessage(s"WARN, User $userId stopped tracking without starting first.", userId)
+      StopTracking(wasAlreadyTracking).logEvent(userId)
+      // update state
+      val newState      = state.copy(current_condition = cond, tracking_timestamp = None)
+      participantState.update(userId, newState)
+      // respond with new state
+      val msg          = upickle.default.write(newState)
+      cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
+    }
+    conditionResponse("/api/userId/stop_tracking", userId, respFunc)
 
   // initialize server at the end
   initialize()

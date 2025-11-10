@@ -40,7 +40,7 @@ object Util:
   def logMessage(msg: String, userId: String = "unknown"): Unit =
     // timestamp with timezone info
     val timestamp = java.time.ZonedDateTime.now().toString
-    val logMsg    = s"$timestamp, $userId, MESSAGE, $msg"
+    val logMsg    = s"$timestamp, $userId, $msg"
     logEntry(logMsg)
 
   def logEvent(event: AccessEvent, userId: String): Unit = logMessage(event.logMessage, userId)

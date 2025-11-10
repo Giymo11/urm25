@@ -1,0 +1,14 @@
+timestamp, userId, event, message
+2025-11-10T18:14:42.477096287+01:00[Europe/Vienna], unknown, ACCESS, resource: /
+2025-11-10T18:14:54.572657033+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T18:14:54.588309425+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T18:14:58.583284865+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T18:14:58.585445038+01:00[Europe/Vienna], brave-otter, WARN, User brave-otter started tracking again without stopping first.
+2025-11-10T18:14:58.593363062+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: true
+2025-11-10T18:15:04.054903127+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T18:15:04.065486088+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T18:15:18.155277465+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T18:15:50.051205073+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T18:15:50.053314984+01:00[Europe/Vienna], brave-otter, WARN, User brave-otter stopped tracking without starting first.
+2025-11-10T18:15:50.060950567+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: false
+2025-11-10T18:16:03.651732498+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
