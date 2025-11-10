@@ -133,3 +133,14 @@ timestamp, userId, event, message
 2025-11-10T21:11:34.634305999+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
 2025-11-10T21:11:36.094603425+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
 2025-11-10T21:11:36.803575575+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:21:34.624310327+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:21:49.185754339+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:21:49.188003358+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:21:54.039261253+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:21:54.041732542+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:23:45.075754279+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:24:06.332345232+01:00[Europe/Vienna], jolly-eagle, ACCESS, resource: /api/userId/state
+2025-11-10T21:24:33.067104275+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:27:21.992603182+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:28:05.055831972+01:00[Europe/Vienna], jolly-eagle, ACCESS, resource: /api/userId/state
+2025-11-10T21:28:07.921454209+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
