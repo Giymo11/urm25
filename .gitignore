@@ -213,4 +213,5 @@ __marimo__/
 out/
 .cache/
 mill
+.vscode/
 

@@ -1,6 +1,7 @@
 package server
 
 import scala.collection.mutable
+import scala.collection.concurrent.TrieMap
 import java.time.*
 import cask.*
 
@@ -21,7 +22,7 @@ object UrmServer extends cask.MainRoutes {
   }
 
   val participantState: mutable.Map[String, ParticipantState] =
-    mutable.HashMap().withDefault(userId => ParticipantState(userId, "", None))
+    TrieMap().withDefault(userId => ParticipantState(userId, "", None))
 
   @cask.get("/")
   def index() =
@@ -38,11 +39,10 @@ object UrmServer extends cask.MainRoutes {
 
   @cask.get("/p/:userId")
   def serve(userId: String) =
-    // TODO: load html template and fill in nickname and pattern
-    val respFunc = (schedule: SubjectSchedule) =>
-      val msg = s"Hello, ${schedule.nickname}! Your pattern is ${schedule.pattern}."
-      cask.Response(msg, 200, Seq("Content-Type" -> "text/html; charset=utf-8"))
-    userResponse("/p/userId", userId, respFunc)
+    // Serve the experiment page; all dynamic data is fetched client-side via /api/:userId/state
+    val htmlPath = os.pwd / "server" / "resources" / "participant.html"
+    val content  = os.read(htmlPath)
+    cask.Response(content, 200, Seq("Content-Type" -> "text/html; charset=utf-8"))
 
   def conditionResponse(path: String, userId: String, func: (String, ParticipantState) => cask.Response[String]) =
     val respFunc = (schedule: SubjectSchedule) =>

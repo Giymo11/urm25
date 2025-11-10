@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiment Tracking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100 flex items-center justify-center">
+  <div class="w-full max-w-xl mx-auto p-6">
+    <header class="mb-6 text-center">
+      <h1 class="text-2xl font-semibold tracking-tight">Hobby Tracking Experiment</h1>
+      <p class="mt-2 text-sm text-slate-400" id="participant-label">Loading your assignment...</p>
+    </header>
+
+    <div id="status-card" class="rounded-2xl border border-slate-800 bg-slate-900/70 shadow-xl p-5 space-y-4">
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <div id="condition-label" class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Condition
+          </div>
+          <div id="condition-value" class="text-lg font-semibold text-slate-50">Loading...</div>
+        </div>
+        <div class="text-right text-xs text-slate-500">
+          <div id="access-indicator"
+            class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Access active</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="condition-message" class="text-sm text-slate-300 leading-relaxed">
+        Checking your condition...
+      </div>
+
+      <div class="pt-2 border-t border-slate-800 flex items-center justify-between gap-4">
+        <div class="flex flex-col text-xs text-slate-500">
+          <span id="tracking-label">Current status:</span>
+          <span id="tracking-status" class="text-sm font-medium text-slate-100">Loading...</span>
+        </div>
+        <button id="tracking-toggle"
+          class="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-medium bg-slate-700 text-slate-50 hover:bg-slate-600 disabled:opacity-40 disabled:cursor-not-allowed transition-colors">
+          Loading...
+        </button>
+      </div>
+    </div>
+
+    <p class="mt-4 text-center text-[10px] text-slate-500">
+      Please keep this page open while tracking. Closing or refreshing the page will not lose your progress.
+    </p>
+  </div>
+
+  <script>
+    (function () {
+      const stateEndpoint = (userId) => `/api/${encodeURIComponent(userId)}/state`;
+      const startEndpoint = (userId) => `/api/${encodeURIComponent(userId)}/start_tracking`;
+      const stopEndpoint = (userId) => `/api/${encodeURIComponent(userId)}/stop_tracking`;
+
+      const participantLabel = document.getElementById('participant-label');
+      const conditionLabel = document.getElementById('condition-label');
+      const conditionValue = document.getElementById('condition-value');
+      const conditionMsg = document.getElementById('condition-message');
+      const trackingStatus = document.getElementById('tracking-status');
+      const trackingToggle = document.getElementById('tracking-toggle');
+      const accessIndicator = document.getElementById('access-indicator');
+
+      function getUserId() {
+        const parts = window.location.pathname.split('/').filter(Boolean);
+        // Expect /p/:userId
+        return parts.length >= 2 && parts[0] === 'p' ? decodeURIComponent(parts[1]) : null;
+      }
+
+      async function fetchState(userId) {
+        const res = await fetch(stateEndpoint(userId), { cache: 'no-store' });
+        if (!res.ok) {
+          throw new Error(`State request failed: ${res.status}`);
+        }
+        return res.json();
+      }
+
+      function renderCondition(condition, userId) {
+        const upper = (condition || '').toUpperCase();
+        conditionValue.textContent = upper || 'Unknown';
+
+        if (upper === 'B') {
+          // Pseudo-random but stable per hour: seed with hour, derive 0..8, then map to 5..13
+          const hour = new Date().getHours();
+          const seeded = Math.abs(Math.sin(hour * 37)) * 9; // 0..9 (exclusive)
+          const friendsCount = 5 + Math.floor(seeded); // 5..13
+
+          conditionLabel.textContent = 'Your view';
+          conditionMsg.innerHTML =
+            "<span class='font-semibold text-emerald-400'>Live friend stats:</span> " +
+            "<span id='friends-counter' class='font-medium text-slate-100'>" +
+            friendsCount +
+            "</span> friends are currently tracking their hobbies today.";
+        } else if (upper === 'A') {
+          conditionLabel.textContent = 'Private mode';
+          conditionMsg.textContent = 'Private mode – friend activity hidden. You can still track your own hobby as part of this study.';
+        } else {
+          conditionLabel.textContent = 'Condition';
+          conditionMsg.textContent = 'Condition information unavailable. You can still use the tracker if enabled.';
+        }
+      }
+
+      function renderTrackingControls(condition, state, userId) {
+        const isTracking = !!state.tracking_timestamp;
+        const upper = (condition || '').toUpperCase();
+
+        trackingStatus.textContent = isTracking
+          ? 'Tracking is active.'
+          : 'Not currently tracking.';
+
+        if (isTracking) {
+          trackingToggle.textContent = 'Stop tracking';
+          trackingToggle.classList.remove('bg-emerald-500', 'hover:bg-emerald-400');
+          trackingToggle.classList.add('bg-rose-500', 'hover:bg-rose-400');
+        } else {
+          trackingToggle.textContent = 'Start tracking';
+          trackingToggle.classList.remove('bg-rose-500', 'hover:bg-rose-400');
+          trackingToggle.classList.add('bg-emerald-500', 'hover:bg-emerald-400');
+        }
+
+        trackingToggle.disabled = false;
+
+        trackingToggle.onclick = async () => {
+          try {
+            trackingToggle.disabled = true;
+            const endpoint = isTracking ? stopEndpoint(userId) : startEndpoint(userId);
+            const res = await fetch(endpoint, { method: 'POST' });
+            if (!res.ok) throw new Error('Failed to update tracking');
+            const newState = await res.json();
+            const newCond = newState.current_condition || upper;
+            renderTrackingControls(newCond, newState, userId);
+          } catch (err) {
+            console.error(err);
+            trackingStatus.textContent = 'Error updating tracking. Please try again.';
+          } finally {
+            trackingToggle.disabled = false;
+          }
+        };
+      }
+
+      async function init() {
+        const userId = getUserId();
+        if (!userId) {
+          participantLabel.textContent = 'Missing participant ID.';
+          conditionValue.textContent = 'Error';
+          conditionMsg.textContent = 'This page must be accessed via your personalized link.';
+          trackingToggle.disabled = true;
+          return;
+        }
+
+        participantLabel.textContent = `Participant: ${userId}`;
+
+        try {
+          const state = await fetchState(userId);
+          const condition = state.current_condition || state.condition;
+
+          renderCondition(condition, userId);
+          renderTrackingControls(condition, state, userId);
+        } catch (err) {
+          console.error(err);
+          conditionValue.textContent = 'Unavailable';
+          conditionMsg.textContent = 'We could not verify your access. Please check your link or try again later.';
+          trackingToggle.disabled = true;
+          accessIndicator.classList.remove('bg-emerald-500/10', 'text-emerald-400', 'border-emerald-500/30');
+          accessIndicator.classList.add('bg-rose-500/10', 'text-rose-400', 'border-rose-500/30');
+          accessIndicator.textContent = 'No active access';
+        }
+      }
+
+      init();
+    })();
+  </script>
+</body>
+
+</html>

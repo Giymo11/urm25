@@ -12,3 +12,124 @@ timestamp, userId, event, message
 2025-11-10T18:15:50.053314984+01:00[Europe/Vienna], brave-otter, WARN, User brave-otter stopped tracking without starting first.
 2025-11-10T18:15:50.060950567+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: false
 2025-11-10T18:16:03.651732498+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T18:16:36.407077091+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /p/userId
+2025-11-10T20:59:46.726345166+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T20:59:53.147737556+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T20:59:53.160899606+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T20:59:57.011999332+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T20:59:57.024319576+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T20:59:59.067077209+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T20:59:59.068899462+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:00:02.339572737+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:00:16.894236369+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:00:31.933358163+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:00:31.945785595+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:00:32.460625741+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:00:39.167408003+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:00:39.169450128+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:00:46.584079687+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:00:46.586006773+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:00:47.016282031+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:00:52.794234827+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:00:56.642389237+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:00:56.644659087+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:00:58.445856832+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:01:00.042524314+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:01:00.045193876+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:01:01.343833018+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:01:01.345869810+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:01:02.063075140+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:01:02.064687616+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:01:02.629730588+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:01:02.631454530+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:01:05.027293732+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:01:05.029354442+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:01:07.372295848+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:01:12.136686761+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:01:12.138664073+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:01:21.970433307+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:01:37.537430027+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:01:52.085999572+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:02:05.922467434+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:02:05.924815438+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:02:06.996332803+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:02:06.998030473+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:02:07.649511850+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:02:08.496068123+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:02:08.498504726+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:02:09.730550070+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:02:09.732475104+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:02:11.591947234+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:02:11.593721314+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:02:12.205993792+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:02:12.207521116+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:02:14.871290340+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:02:14.873249220+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:02:15.731567917+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:02:15.733138438+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:02:22.201723429+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:02:28.409356958+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:02:28.411432311+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:02:35.129378450+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:02:35.131339800+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:02:37.766278044+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:02:39.585174681+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:02:39.587231070+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:02:52.229165998+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:03:06.795438868+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:03:20.745719180+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:03:20.747782394+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:03:22.548595610+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:03:27.808159240+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:03:27.810151800+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:03:37.016879870+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:03:52.537846872+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:04:06.908588137+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:04:22.883832366+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:04:37.189580548+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:04:52.870675680+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:05:07.186888414+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:05:22.934938951+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:05:37.587980972+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:05:51.955234360+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:06:07.722372174+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:06:22.038866526+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:06:37.819307089+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:06:38.431367772+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:06:38.433593515+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:06:39.016482769+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:06:39.018089941+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:06:40.115857902+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:06:40.117656701+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:06:52.097859242+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:07:00.068016378+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:07:00.069960709+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:07:01.894288169+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:07:01.896186580+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:07:02.721987058+01:00[Europe/Vienna], undefined, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:07:02.723814705+01:00[Europe/Vienna], unknown, INVALID_USER, userId: undefined
+2025-11-10T21:07:07.953937285+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:07:22.260999306+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:07:37.993946413+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:07:52.552386512+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:08:07.003414422+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:08:22.430804915+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:08:36.995521803+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:08:52.829299455+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:08:54.832309334+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:08:56.475572427+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:08:56.488262211+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:08:57.302128978+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:08:57.315030156+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:08:58.541142773+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:08:58.543041100+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:09:00.099613131+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:09:00.101741284+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:09:08.329150913+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:11:31.978003906+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:11:33.918092505+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/start_tracking
+2025-11-10T21:11:33.920544549+01:00[Europe/Vienna], brave-otter, START_TRACKING, previously tracking: false
+2025-11-10T21:11:34.632069613+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/stop_tracking
+2025-11-10T21:11:34.634305999+01:00[Europe/Vienna], brave-otter, STOP_TRACKING, previously tracking: true
+2025-11-10T21:11:36.094603425+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
+2025-11-10T21:11:36.803575575+01:00[Europe/Vienna], brave-otter, ACCESS, resource: /api/userId/state
