@@ -42,7 +42,8 @@ object UrmServer extends cask.MainRoutes {
     // Serve the experiment page; all dynamic data is fetched client-side via /api/:userId/state
     val htmlPath = os.pwd / "server" / "resources" / "participant.html"
     val content  = os.read(htmlPath)
-    cask.Response(content, 200, Seq("Content-Type" -> "text/html; charset=utf-8"))
+    val respFunc = (_: SubjectSchedule) => cask.Response(content, 200, Seq("Content-Type" -> "text/html; charset=utf-8"))
+    userResponse("/p/userId", userId, respFunc)
 
   def conditionResponse(path: String, userId: String, func: (String, ParticipantState) => cask.Response[String]) =
     val respFunc = (schedule: SubjectSchedule) =>

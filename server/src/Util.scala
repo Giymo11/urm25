@@ -48,7 +48,7 @@ object Util:
 // create json for server to load
 case class SubjectSchedule(nickname: String, pattern: String, start_date: String) derives ReadWriter {
   def daysAfterStart: Long =
-    Duration.between(Instant.now(), Instant.parse(start_date)).toDays
+    Duration.between(Instant.parse(start_date), Instant.now()).toDays
 
   def isWithinAccessPeriod: Boolean =
     daysAfterStart >= 0 && daysAfterStart < 5
