@@ -111,8 +111,8 @@ object Config {
   private def envPath(name: String, default: os.Path): os.Path =
     sys.env.get(name).map(os.Path(_, os.pwd)).getOrElse(default)
 
-  val schedulePath = envPath("SCHEDULE_PATH", os.Path("/data/schedule.json", os.pwd))
-  val logfilePath  = envPath("SERVER_LOG_PATH", os.Path("/data/server.log", os.pwd))
+  val schedulePath = envPath("SCHEDULE_PATH", os.Path("./data/schedule.json", os.pwd))
+  val logfilePath  = envPath("SERVER_LOG_PATH", os.Path("./data/server.log", os.pwd))
 }
 
 extension (error: AccessError)
