@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  server:
+    # Build the image using mill's DockerModule output
+    # Ensure you run: mill server.docker.build
+    image: server:latest
+    container_name: urm25-server
+    restart: unless-stopped
+
+    ports:
+      - "8080:8080"
+
+    # Mount external data directory into container at /data
+    # Expects schedule.json and server.log to live in ./data on the host
+    volumes:
+      - ./data:/data:rw
+
+    # Example environment variables for clarity/extensibility
+    environment:
+      # Path inside container where schedule.json is expected
+      - SCHEDULE_PATH=/data/schedule.json
+      # Path inside container where server.log is written/read
+      - SERVER_LOG_PATH=/data/server.log

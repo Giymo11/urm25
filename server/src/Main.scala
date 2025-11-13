@@ -42,8 +42,7 @@ object UrmServer extends cask.MainRoutes {
     // Serve the experiment page; all dynamic data is fetched client-side via /api/:userId/state
     val htmlPath = os.pwd / "server" / "resources" / "participant.html"
     val content  = os.read(htmlPath)
-    val respFunc = (_: SubjectSchedule) => cask.Response(content, 200, Seq("Content-Type" -> "text/html; charset=utf-8"))
-    userResponse("/p/userId", userId, respFunc)
+    cask.Response(content, 200, Seq("Content-Type" -> "text/html; charset=utf-8"))
 
   def conditionResponse(path: String, userId: String, func: (String, ParticipantState) => cask.Response[String]) =
     val respFunc = (schedule: SubjectSchedule) =>
@@ -108,8 +107,12 @@ object UrmServer extends cask.MainRoutes {
 }
 
 object Config {
-  val schedulePath = os.pwd / "data" / "schedule.json"
-  val logfilePath  = os.pwd / "data" / "server.log"
+  // Resolve paths from environment variables if set, otherwise default to /data inside container
+  private def envPath(name: String, default: os.Path): os.Path =
+    sys.env.get(name).map(os.Path(_, os.pwd)).getOrElse(default)
+
+  val schedulePath = envPath("SCHEDULE_PATH", os.Path("/data/schedule.json", os.pwd))
+  val logfilePath  = envPath("SERVER_LOG_PATH", os.Path("/data/server.log", os.pwd))
 }
 
 extension (error: AccessError)
