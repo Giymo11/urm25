@@ -17,7 +17,7 @@ object server extends ScalaModule with DockerModule {
   object docker extends DockerConfig {
     def exposedPorts = Seq(8080)
 
-    def tags = List("Giymo11/urm-server:latest")
+    def tags = List("giymo11/urm-server:latest")
 
     // Mount /data from host; expects schedule.json and server.log to be present there.
     // On VPS: docker run -v /data:/data -p 8080:8080 <image>
@@ -25,5 +25,6 @@ object server extends ScalaModule with DockerModule {
 
     // Ensure schedule.json and server.log from /data are available in the image context if needed
     // and document their usage for the app.
+    def platform = "linux/arm64"
   }
 }
