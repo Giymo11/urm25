@@ -31,10 +31,10 @@ object Util:
     import os.*
     // log using os-lib, ensure no concurrency issues
     this.synchronized {
-      if !exists(pwd / Config.logfilePath) then
+      if !exists(Config.logfilePath) then
         val header = "timestamp, userId, event, message\n"
-        write(pwd / Config.logfilePath, header, createFolders = true)
-      write.append(pwd / Config.logfilePath, msg + "\n")
+        write(Config.logfilePath, header, createFolders = true)
+      write.append(Config.logfilePath, msg + "\n")
     }
 
   def logMessage(msg: String, userId: String = "unknown"): Unit =

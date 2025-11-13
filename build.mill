@@ -1,10 +1,12 @@
 //| mill-version: 1.1.0-RC1
+//| mvnDeps: ["com.lihaoyi::mill-contrib-docker:$MILL_VERSION"]
 
 package build
 
 import mill.*, scalalib.*
+import contrib.docker.DockerModule
 
-object server extends ScalaModule {
+object server extends ScalaModule with DockerModule {
   def scalaVersion = "3.7.3"
   def mvnDeps = Seq(
       mvn"com.lihaoyi::upickle:4.4.1",
@@ -12,4 +14,15 @@ object server extends ScalaModule {
       mvn"com.lihaoyi::cask:0.11.3",
       mvn"com.lihaoyi::scalatags:0.13.1"
     )
+  object docker extends DockerConfig {
+    def baseImage = "openjdk:17-alpine"
+    def exposedPorts = Seq(8080)
+
+    // Mount /data from host; expects schedule.json and server.log to be present there.
+    // On VPS: docker run -v /data:/data -p 8080:8080 <image>
+    def volumes = Seq("/data")
+
+    // Ensure schedule.json and server.log from /data are available in the image context if needed
+    // and document their usage for the app.
+  }
 }

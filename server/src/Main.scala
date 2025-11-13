@@ -107,8 +107,8 @@ object UrmServer extends cask.MainRoutes {
 }
 
 object Config {
-  val schedulePath = os.pwd / "schedule.json"
-  val logfilePath  = "server.log"
+  val schedulePath = os.pwd / "data" / "schedule.json"
+  val logfilePath  = os.pwd / "data" / "server.log"
 }
 
 extension (error: AccessError)
