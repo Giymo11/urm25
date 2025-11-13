@@ -1,15 +1,24 @@
 version: "3.9"
 
+networks:
+  caddy_net:
+    external: true
+    name: caddy_net
+
 services:
-  server:
+  urm25-server:
     # Build the image using mill's DockerModule output
     # Ensure you run: mill server.docker.build
-    image: server:latest
+    image: giymo11/urm25-server:latest
     container_name: urm25-server
     restart: unless-stopped
 
     ports:
       - "8080:8080"
+
+    networks:
+      - default
+      - caddy_net
 
     # Mount external data directory into container at /data
     # Expects schedule.json and server.log to live in ./data on the host

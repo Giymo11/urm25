@@ -16,8 +16,9 @@ object server extends ScalaModule with DockerModule {
     )
   object docker extends DockerConfig {
     def exposedPorts = Seq(8080)
+    def baseImage = "eclipse-temurin:21-jre"
 
-    def tags = List("giymo11/urm-server:latest")
+    def tags = List("giymo11/urm25-server:latest")
 
     // Mount /data from host; expects schedule.json and server.log to be present there.
     // On VPS: docker run -v /data:/data -p 8080:8080 <image>
