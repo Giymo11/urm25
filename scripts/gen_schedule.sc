@@ -64,7 +64,7 @@ def parseTimestamp(datestr: String): Instant = {
 
 val filename         = "schedule.json"
 // start date, starting at 4 AM
-val start_date       = "2025-11-14 04:00"
+val start_date       = "2025-12-01 04:00"
 val start_timestamp  = parseTimestamp(start_date).toString
 val num_subjects     = 20
 val patterns         = Seq("AABBB", "AAABB")

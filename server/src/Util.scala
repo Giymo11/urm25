@@ -51,7 +51,9 @@ case class SubjectSchedule(nickname: String, pattern: String, start_date: String
     Duration.between(Instant.parse(start_date), Instant.now()).toDays
 
   def isWithinAccessPeriod: Boolean =
-    daysAfterStart >= 0 && daysAfterStart < 5
+    // check for second-level accuracy
+    Duration.between(Instant.parse(start_date), Instant.now()).toSeconds >= 0 &&
+      Duration.between(Instant.parse(start_date), Instant.now()).toSeconds < 5 * 24 * 60 * 60
 
   def currentCondition: Option[String] =
     if isWithinAccessPeriod then Some(pattern(daysAfterStart.toInt).toString) else None

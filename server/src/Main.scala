@@ -33,7 +33,7 @@ object UrmServer extends cask.MainRoutes {
     Access(path).logEvent(userId)
     schedules.get(userId) match {
       case Some(schedule) if schedule.isWithinAccessPeriod => func(schedule)
-      case Some(_)                                         => InvalidTime(Instant.now()).toResponse
+      case Some(schedule)                                  => InvalidTime(Instant.parse(schedule.start_date)).toResponse
       case None                                            => InvalidUser(userId).toResponse
     }
 
@@ -47,34 +47,38 @@ object UrmServer extends cask.MainRoutes {
   def conditionResponse(path: String, userId: String, func: (String, ParticipantState) => cask.Response[String]) =
     val respFunc = (schedule: SubjectSchedule) =>
       schedule.currentCondition match {
-        case Some(cond) if cond != participantState(userId).current_condition => 
-          val state = participantState(userId)
+        case Some(cond) if cond != participantState(userId).current_condition =>
+          val state    = participantState(userId)
           // check if currently tracking
           if state.tracking_timestamp.isDefined then
-            Util.logMessage(s"WARN, User $userId condition changed from ${state.current_condition} to $cond while tracking.", userId)
+            Util.logMessage(
+              s"WARN, User $userId condition changed from ${state.current_condition} to $cond while tracking.",
+              userId
+            )
           // update state
           val newState = state.copy(current_condition = cond, tracking_timestamp = None)
           participantState.update(userId, newState)
           // respond with new condition
           func(cond, participantState(userId))
-        case Some(cond) => func(cond, participantState(userId))
-        case None       => InvalidTime(Instant.now()).toResponse
+        case Some(cond)                                                       => func(cond, participantState(userId))
+        case None                                                             => InvalidTime(Instant.parse(schedule.start_date)).toResponse
       }
     userResponse(path, userId, respFunc)
 
   @cask.get("/api/:userId/state")
   def getState(userId: String) =
-    val respFunc = (condition: String, state: ParticipantState) => 
+    val respFunc = (condition: String, state: ParticipantState) =>
       val msg = upickle.default.write(state)
       cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
     conditionResponse("/api/userId/state", userId, respFunc)
 
   @cask.post("/api/:userId/start_tracking")
-  def startTracking(userId: String) = 
+  def startTracking(userId: String) =
     val respFunc = (cond: String, state: ParticipantState) => {
       // log if already tracking
       val wasAlreadyTracking = state.tracking_timestamp.isDefined
-      if wasAlreadyTracking then Util.logMessage(s"WARN, User $userId started tracking again without stopping first.", userId)
+      if wasAlreadyTracking then
+        Util.logMessage(s"WARN, User $userId started tracking again without stopping first.", userId)
       StartTracking(wasAlreadyTracking).logEvent(userId)
       // update state
       val timestamp          = Instant.now().toString
@@ -87,17 +91,18 @@ object UrmServer extends cask.MainRoutes {
     conditionResponse("/api/userId/start_tracking", userId, respFunc)
 
   @cask.post("/api/:userId/stop_tracking")
-  def stopTracking(userId: String) = 
+  def stopTracking(userId: String) =
     val respFunc = (cond: String, state: ParticipantState) => {
       // log if not tracking
       val wasAlreadyTracking = state.tracking_timestamp.isDefined
-      if !wasAlreadyTracking then Util.logMessage(s"WARN, User $userId stopped tracking without starting first.", userId)
+      if !wasAlreadyTracking then
+        Util.logMessage(s"WARN, User $userId stopped tracking without starting first.", userId)
       StopTracking(wasAlreadyTracking).logEvent(userId)
       // update state
-      val newState      = state.copy(current_condition = cond, tracking_timestamp = None)
+      val newState           = state.copy(current_condition = cond, tracking_timestamp = None)
       participantState.update(userId, newState)
       // respond with new state
-      val msg          = upickle.default.write(newState)
+      val msg                = upickle.default.write(newState)
       cask.Response(msg, 200, Seq("Content-Type" -> "application/json; charset=utf-8"))
     }
     conditionResponse("/api/userId/stop_tracking", userId, respFunc)
