@@ -107,6 +107,9 @@ object UrmServer extends cask.MainRoutes {
     }
     conditionResponse("/api/userId/stop_tracking", userId, respFunc)
 
+  @cask.staticResources("/static")
+  def staticResources() = "static"
+
   // initialize server at the end
   initialize()
 }
