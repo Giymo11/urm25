@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ************ */
+
+html {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mobile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  min-height: 650px;
+  box-sizing: border-box;
+  outline: 5px black solid;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.scenario-b {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: none;
+}
+
+.currently-active {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #a7d0ea;
+  border-radius: 25px;
+  padding: 15px 2px;
+}
+
+.others-circle {
+  height: 52px;
+  width: 52px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px black solid;
+  text-align: center;
+  overflow: hidden;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Vertical centering */
+  flex-wrap: wrap;
+  justify-content: center; /* Horizontal centering */
+  overflow: hidden;
+  font-size: 13px;
+  line-height: normal;
+  align-content: center;
+}
+
+.friends-no {
+  font-size: 13px;
+  line-height: normal;
+}
+
+.history-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-post {
+  outline: 3px solid black;
+  border-radius: 25px;
+  display: flex;
+  padding: 12px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: stretch;
+}
+
+span {
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.scenario-a {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.info-emoji {
+  margin-top: 20%;
+  font-size: 128px;
+  text-align: center;
+  line-height: 1;
+}
+
+.info {
+  font-size: 28px;
+  margin-bottom: 20%;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.timer-panel {
+  border-radius: 25px;
+  background-color: #a7d0ea;
+
+  text-align: center;
+  font-size: 46px;
+}
+
+.bottom-bar {
+  margin-top: auto;
+  display: flex;
+  padding: 15px 20px;
+  flex-direction: row-reverse;
+}
+
+button {
+  border-radius: 100px;
+  font-size: 20px;
+  border: 0px;
+  display: flex;
+}
+
+.start {
+  background-color: rgb(126, 221, 141);
+}
+
+.stop {
+  background-color: rgb(250, 151, 184);
+}
+
+@media (max-width: 450px) {
+  .mobile-container {
+    max-width: 100vw;
+    min-height: 100vh;
+    outline: 0px;
+  }
+}
