@@ -101,6 +101,7 @@
       : null;
 
     function formatTime(secs) {
+      secs = Math.max(0, Math.floor(Number(secs) || 0));
       const m = String(Math.floor(secs / 60)).padStart(2, "0");
       const s = String(secs % 60).padStart(2, "0");
       return `${m}:${s}`;
@@ -108,7 +109,9 @@
 
     function updateTimers() {
       if (!startTime) return;
-      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      let elapsed = Math.floor((Date.now() - startTime) / 1000);
+      // clamp negative elapsed to 0 to avoid "-1:-1"
+      if (elapsed < 0) elapsed = 0;
       timerPanels.forEach((panel) => {
         panel.textContent = formatTime(elapsed);
       });
