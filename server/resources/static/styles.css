@@ -228,6 +228,7 @@ button {
   font-size: 20px;
   border: 0px;
   display: flex;
+  color: black;
 }
 
 .start {
