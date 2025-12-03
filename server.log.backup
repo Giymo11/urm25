@@ -1,0 +1,407 @@
+timestamp, userId, event, message
+2025-11-30T09:40:14.075008245Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/start_tracking
+2025-11-30T09:40:14.079680448Z[Etc/UTC], afghanistan, START_TRACKING, previously tracking: false
+2025-11-30T09:40:18.264688938Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/stop_tracking
+2025-11-30T09:40:18.265519225Z[Etc/UTC], afghanistan, STOP_TRACKING, previously tracking: true
+2025-11-30T10:12:30.242478865Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/state
+2025-11-30T10:12:31.477531441Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/start_tracking
+2025-11-30T10:12:31.478371648Z[Etc/UTC], afghanistan, START_TRACKING, previously tracking: false
+2025-11-30T10:12:34.062613287Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/stop_tracking
+2025-11-30T10:12:34.063418215Z[Etc/UTC], afghanistan, STOP_TRACKING, previously tracking: true
+2025-11-30T10:31:37.330545921Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/state
+2025-11-30T10:31:39.312367086Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/start_tracking
+2025-11-30T10:31:39.313131253Z[Etc/UTC], afghanistan, START_TRACKING, previously tracking: false
+2025-11-30T10:31:43.865430962Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/stop_tracking
+2025-11-30T10:31:43.866174729Z[Etc/UTC], afghanistan, STOP_TRACKING, previously tracking: true
+2025-11-30T10:31:44.298491029Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/start_tracking
+2025-11-30T10:31:44.299233076Z[Etc/UTC], afghanistan, START_TRACKING, previously tracking: false
+2025-11-30T10:31:46.987415944Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/stop_tracking
+2025-11-30T10:31:46.988081950Z[Etc/UTC], afghanistan, STOP_TRACKING, previously tracking: true
+2025-11-30T11:05:18.935312732Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/state
+2025-11-30T12:51:34.330088109Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/state
+2025-11-30T12:51:36.828694684Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/start_tracking
+2025-11-30T12:51:36.829550812Z[Etc/UTC], afghanistan, START_TRACKING, previously tracking: false
+2025-11-30T12:51:45.244272254Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/stop_tracking
+2025-11-30T12:51:45.244919180Z[Etc/UTC], afghanistan, STOP_TRACKING, previously tracking: true
+2025-11-30T12:51:45.644212864Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/start_tracking
+2025-11-30T12:51:45.644994151Z[Etc/UTC], afghanistan, START_TRACKING, previously tracking: false
+2025-11-30T19:29:41.857026893Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/state
+2025-11-30T19:29:47.280897840Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/state
+2025-11-30T19:29:49.784576225Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/stop_tracking
+2025-11-30T19:29:49.785247431Z[Etc/UTC], afghanistan, STOP_TRACKING, previously tracking: true
+2025-11-30T19:36:47.881072229Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/start_tracking
+2025-11-30T19:36:47.881822636Z[Etc/UTC], afghanistan, START_TRACKING, previously tracking: false
+2025-11-30T19:36:52.881410654Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/state
+2025-11-30T19:36:55.489881639Z[Etc/UTC], afghanistan, ACCESS, resource: /api/userId/stop_tracking
+2025-11-30T19:36:55.490515485Z[Etc/UTC], afghanistan, STOP_TRACKING, previously tracking: true
+2025-11-30T19:50:05.886569455Z[Etc/UTC], proud-rabbit, ACCESS, resource: /api/userId/state
+2025-11-30T19:50:05.888761275Z[Etc/UTC], unknown, INVALID_TIME, access starts: 2025-12-01T03:00:00Z
+2025-12-01T07:37:34.587372849Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/state
+2025-12-01T07:39:49.898885073Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/state
+2025-12-01T07:48:47.554135093Z[Etc/UTC], lively-wolf, ACCESS, resource: /api/userId/state
+2025-12-01T07:48:51.914867492Z[Etc/UTC], lively-wolf, ACCESS, resource: /api/userId/state
+2025-12-01T07:52:00.203533390Z[Etc/UTC], lively-wolf, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T07:52:00.204119476Z[Etc/UTC], lively-wolf, START_TRACKING, previously tracking: false
+2025-12-01T07:52:03.725050910Z[Etc/UTC], lively-wolf, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T07:52:03.725604155Z[Etc/UTC], lively-wolf, STOP_TRACKING, previously tracking: true
+2025-12-01T08:45:00.700286210Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-01T08:45:09.363755252Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T08:45:09.364411258Z[Etc/UTC], fierce-koala, START_TRACKING, previously tracking: false
+2025-12-01T08:57:38.513111649Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-01T08:58:48.019463768Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T08:58:48.020009453Z[Etc/UTC], fierce-koala, STOP_TRACKING, previously tracking: true
+2025-12-01T09:02:20.659530717Z[Etc/UTC], unknown, ACCESS, resource: /
+2025-12-01T09:13:18.857591352Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-01T09:13:24.807279321Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T09:13:24.807894007Z[Etc/UTC], kind-hawk, START_TRACKING, previously tracking: false
+2025-12-01T09:17:27.636288752Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T09:17:27.636903998Z[Etc/UTC], kind-hawk, STOP_TRACKING, previously tracking: true
+2025-12-01T09:17:30.681536609Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-01T09:33:15.590248194Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/state
+2025-12-01T09:36:25.307008216Z[Etc/UTC], unknown, ACCESS, resource: /
+2025-12-01T09:49:27.621166560Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/state
+2025-12-01T09:49:29.757782839Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/state
+2025-12-01T10:29:20.202317454Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/state
+2025-12-01T10:29:21.497890646Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T10:29:21.498605053Z[Etc/UTC], brave-bear, START_TRACKING, previously tracking: false
+2025-12-01T10:37:51.463595230Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-01T10:38:18.942887409Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T10:38:18.943502215Z[Etc/UTC], fierce-koala, START_TRACKING, previously tracking: false
+2025-12-01T10:50:51.132567009Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-01T10:51:56.531873917Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-01T10:52:13.645801266Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-01T10:55:17.588010424Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T10:55:17.588635630Z[Etc/UTC], happy-fox, START_TRACKING, previously tracking: false
+2025-12-01T11:01:24.067689255Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T11:01:24.068358741Z[Etc/UTC], fierce-koala, STOP_TRACKING, previously tracking: true
+2025-12-01T11:18:35.926213920Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T11:18:35.926888886Z[Etc/UTC], happy-fox, STOP_TRACKING, previously tracking: true
+2025-12-01T11:18:44.154557006Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-01T11:18:48.821493089Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-01T11:40:44.808950054Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/state
+2025-12-01T11:40:48.196911079Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T11:40:48.197510084Z[Etc/UTC], brave-bear, STOP_TRACKING, previously tracking: true
+2025-12-01T11:59:53.190546108Z[Etc/UTC], wise-fox, ACCESS, resource: /api/userId/state
+2025-12-01T12:27:48.336791479Z[Etc/UTC], unknown, ACCESS, resource: /
+2025-12-01T12:31:57.652168617Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-01T12:32:03.702726400Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T12:32:03.703249565Z[Etc/UTC], gentle-bear, START_TRACKING, previously tracking: false
+2025-12-01T12:34:39.080517186Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-01T13:01:08.949534Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T13:01:08.950078525Z[Etc/UTC], gentle-bear, STOP_TRACKING, previously tracking: true
+2025-12-01T13:50:23.498152032Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/state
+2025-12-01T13:50:31.088975192Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-01T13:53:48.383900548Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T13:53:48.384441273Z[Etc/UTC], fierce-koala, START_TRACKING, previously tracking: false
+2025-12-01T14:19:30.824229213Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-01T14:19:37.453639087Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-01T14:19:42.631424213Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-01T14:21:39.861324347Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-01T14:21:57.970457268Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T14:21:57.971127994Z[Etc/UTC], fierce-bear, START_TRACKING, previously tracking: false
+2025-12-01T14:22:03.702813912Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T14:22:03.703393358Z[Etc/UTC], fierce-bear, STOP_TRACKING, previously tracking: true
+2025-12-01T14:30:04.759884671Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-01T14:33:37.067163393Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T14:33:37.067781718Z[Etc/UTC], fierce-koala, STOP_TRACKING, previously tracking: true
+2025-12-01T15:25:01.398748119Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-01T15:59:27.511077858Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-01T15:59:31.452309682Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T15:59:31.453032329Z[Etc/UTC], eager-dolphin, START_TRACKING, previously tracking: false
+2025-12-01T16:02:13.361316035Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/state
+2025-12-01T16:02:41.313873820Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/state
+2025-12-01T16:21:18.278882362Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/state
+2025-12-01T16:21:32.328225473Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T16:21:32.328878199Z[Etc/UTC], lively-lion, START_TRACKING, previously tracking: false
+2025-12-01T16:46:48.412159843Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T16:46:48.412770569Z[Etc/UTC], eager-dolphin, STOP_TRACKING, previously tracking: true
+2025-12-01T17:31:41.784130459Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-01T17:32:14.451676897Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T17:32:14.452264543Z[Etc/UTC], happy-fox, START_TRACKING, previously tracking: false
+2025-12-01T17:56:38.814154672Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T17:56:38.814952839Z[Etc/UTC], happy-fox, STOP_TRACKING, previously tracking: true
+2025-12-01T18:06:07.443266388Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/state
+2025-12-01T18:06:13.120557252Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T18:06:13.121406660Z[Etc/UTC], lively-dolphin, START_TRACKING, previously tracking: false
+2025-12-01T18:20:11.241066891Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-01T18:20:13.212952858Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T18:20:13.213500303Z[Etc/UTC], eager-dolphin, START_TRACKING, previously tracking: false
+2025-12-01T18:39:58.954341812Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-01T18:40:01.436602633Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T18:40:01.437218479Z[Etc/UTC], curious-eagle, START_TRACKING, previously tracking: false
+2025-12-01T18:40:01.772983958Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-01T18:44:43.143186391Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T18:45:00.653262741Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/state
+2025-12-01T18:45:05.221380175Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T18:45:05.221968861Z[Etc/UTC], quick-rabbit, START_TRACKING, previously tracking: false
+2025-12-01T18:45:06.479706409Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T18:45:06.480278494Z[Etc/UTC], quick-rabbit, STOP_TRACKING, previously tracking: true
+2025-12-01T18:45:09.249561056Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/state
+2025-12-01T18:46:10.853355935Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/state
+2025-12-01T18:46:15.375355031Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/state
+2025-12-01T18:46:49.284973680Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T18:46:49.285530045Z[Etc/UTC], fierce-lion, START_TRACKING, previously tracking: false
+2025-12-01T18:47:48.137359681Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/state
+2025-12-01T18:48:29.523524579Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/state
+2025-12-01T18:48:30.901569574Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T18:48:30.902150099Z[Etc/UTC], quick-rabbit, START_TRACKING, previously tracking: false
+2025-12-01T18:58:02.945470407Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/state
+2025-12-01T18:58:04.574739680Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T18:58:04.575625208Z[Etc/UTC], eager-fox, START_TRACKING, previously tracking: false
+2025-12-01T19:01:43.908392780Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T19:01:43.909595311Z[Etc/UTC], eager-dolphin, STOP_TRACKING, previously tracking: true
+2025-12-01T19:07:31.861540515Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T19:07:31.862164400Z[Etc/UTC], fierce-lion, STOP_TRACKING, previously tracking: true
+2025-12-01T19:09:09.511971781Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:12.384798195Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:13.050717053Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:13.781762863Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:14.437932153Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:14.901012446Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:15.331502802Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:15.744306197Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:16.136992530Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:16.531295317Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:17.123566626Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:17.522536975Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:09:17.946550953Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:15:08.820150763Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/state
+2025-12-01T19:15:13.729511614Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T19:15:13.730073419Z[Etc/UTC], proud-tiger, START_TRACKING, previously tracking: false
+2025-12-01T19:19:56.228320132Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T19:19:56.228937897Z[Etc/UTC], quick-rabbit, STOP_TRACKING, previously tracking: true
+2025-12-01T19:19:58.974538465Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/state
+2025-12-01T19:22:48.808522106Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-01T19:30:07.105729547Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T19:30:07.106232232Z[Etc/UTC], fierce-lion, START_TRACKING, previously tracking: false
+2025-12-01T19:49:43.527090021Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/state
+2025-12-01T19:49:45.528913567Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T19:49:45.529408012Z[Etc/UTC], lively-lion, STOP_TRACKING, previously tracking: true
+2025-12-01T19:51:37.476445284Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-01T19:51:55.494075362Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T19:51:55.494593167Z[Etc/UTC], lively-dolphin, STOP_TRACKING, previously tracking: true
+2025-12-01T19:53:07.676163484Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-01T19:55:28.533947179Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T19:55:28.534766626Z[Etc/UTC], curious-eagle, STOP_TRACKING, previously tracking: true
+2025-12-01T19:57:43.301962255Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-01T19:59:27.381351216Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/state
+2025-12-01T19:59:29.112834839Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T19:59:29.113401204Z[Etc/UTC], brave-bear, START_TRACKING, previously tracking: false
+2025-12-01T20:00:53.518446136Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-01T20:05:15.866700435Z[Etc/UTC], wise-fox, ACCESS, resource: /api/userId/state
+2025-12-01T20:21:34.109783548Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T20:21:34.110243272Z[Etc/UTC], fierce-lion, STOP_TRACKING, previously tracking: true
+2025-12-01T20:23:09.220857096Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/state
+2025-12-01T20:23:11.611021610Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T20:23:11.611511334Z[Etc/UTC], proud-koala, START_TRACKING, previously tracking: false
+2025-12-01T20:23:27.293217593Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-01T20:23:31.381540905Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T20:23:31.382095870Z[Etc/UTC], fierce-bear, START_TRACKING, previously tracking: false
+2025-12-01T20:35:41.555589221Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-01T20:41:04.887856554Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-01T20:49:05.111200068Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T20:49:05.111639112Z[Etc/UTC], proud-koala, STOP_TRACKING, previously tracking: true
+2025-12-01T21:15:01.301859862Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-01T21:15:07.215432087Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T21:15:07.215995292Z[Etc/UTC], fierce-lion, START_TRACKING, previously tracking: false
+2025-12-01T21:19:59.007722992Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T21:19:59.008202837Z[Etc/UTC], proud-tiger, STOP_TRACKING, previously tracking: true
+2025-12-01T21:23:50.318096302Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T21:23:50.318573266Z[Etc/UTC], eager-fox, STOP_TRACKING, previously tracking: true
+2025-12-01T21:30:21.575810875Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/state
+2025-12-01T21:30:23.433762153Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T21:30:23.434197957Z[Etc/UTC], brave-bear, STOP_TRACKING, previously tracking: true
+2025-12-01T21:44:19.589820176Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-01T21:50:49.428946908Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-01T21:50:53.005360658Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T21:50:53.005869983Z[Etc/UTC], fierce-bear, STOP_TRACKING, previously tracking: true
+2025-12-01T22:09:06.633229079Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-01T22:11:11.343276752Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/state
+2025-12-01T22:11:14.660694869Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T22:11:14.661295474Z[Etc/UTC], proud-tiger, START_TRACKING, previously tracking: false
+2025-12-01T22:35:19.864976939Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T22:35:19.865989628Z[Etc/UTC], proud-tiger, STOP_TRACKING, previously tracking: true
+2025-12-01T22:38:35.644716427Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/state
+2025-12-01T22:41:58.829146845Z[Etc/UTC], fierce-tiger, ACCESS, resource: /api/userId/state
+2025-12-01T22:42:09.307710510Z[Etc/UTC], fierce-tiger, ACCESS, resource: /api/userId/state
+2025-12-01T22:42:10.691076237Z[Etc/UTC], fierce-tiger, ACCESS, resource: /api/userId/state
+2025-12-01T22:42:48.423042411Z[Etc/UTC], fierce-tiger, ACCESS, resource: /api/userId/start_tracking
+2025-12-01T22:42:48.423478215Z[Etc/UTC], fierce-tiger, START_TRACKING, previously tracking: false
+2025-12-01T22:44:23.369759571Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T22:44:23.370183295Z[Etc/UTC], fierce-lion, STOP_TRACKING, previously tracking: true
+2025-12-01T23:27:37.811888394Z[Etc/UTC], fierce-tiger, ACCESS, resource: /api/userId/stop_tracking
+2025-12-01T23:27:37.812291037Z[Etc/UTC], fierce-tiger, STOP_TRACKING, previously tracking: true
+2025-12-02T06:00:25.500788140Z[Etc/UTC], unknown, ACCESS, resource: /
+2025-12-02T07:26:52.706693243Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-02T07:30:24.628044134Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T07:30:24.628533219Z[Etc/UTC], fierce-koala, START_TRACKING, previously tracking: false
+2025-12-02T07:54:11.363916819Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T07:54:11.364325383Z[Etc/UTC], fierce-koala, STOP_TRACKING, previously tracking: true
+2025-12-02T07:59:54.264477417Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-02T07:59:55.422723947Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-02T07:59:56.464507606Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-02T08:17:34.119535546Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-02T08:51:16.116916226Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-02T08:51:40.393143826Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T08:51:40.393698511Z[Etc/UTC], gentle-bear, START_TRACKING, previously tracking: false
+2025-12-02T09:10:12.405369545Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-02T09:12:10.572966160Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-02T09:52:04.566162062Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-02T09:52:25.972193681Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-02T09:52:33.628737435Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T09:52:33.629245559Z[Etc/UTC], fierce-bear, START_TRACKING, previously tracking: false
+2025-12-02T09:55:05.666591629Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T09:55:05.667123034Z[Etc/UTC], gentle-bear, STOP_TRACKING, previously tracking: true
+2025-12-02T10:10:23.578692990Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-02T10:10:26.452827217Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T10:10:26.453309301Z[Etc/UTC], curious-eagle, START_TRACKING, previously tracking: false
+2025-12-02T10:19:39.911387922Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-02T10:20:21.262560328Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/state
+2025-12-02T10:20:35.506357958Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T10:20:35.506949964Z[Etc/UTC], happy-fox, START_TRACKING, previously tracking: false
+2025-12-02T10:50:25.081208580Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T10:50:25.081622024Z[Etc/UTC], happy-fox, STOP_TRACKING, previously tracking: true
+2025-12-02T11:00:16.061092924Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-02T11:00:18.693308504Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T11:00:18.693762588Z[Etc/UTC], fierce-bear, STOP_TRACKING, previously tracking: true
+2025-12-02T11:26:12.412629847Z[Etc/UTC], unknown, ACCESS, resource: /
+2025-12-02T11:48:21.476979385Z[Etc/UTC], wise-fox, ACCESS, resource: /api/userId/state
+2025-12-02T11:49:31.167139940Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-02T11:49:37.669613636Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T11:49:37.670092Z[Etc/UTC], kind-hawk, START_TRACKING, previously tracking: false
+2025-12-02T11:58:03.545975862Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-02T12:02:32.498141492Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-02T12:10:18.717791408Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-02T12:42:15.403227611Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/state
+2025-12-02T12:42:18.784022350Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/state
+2025-12-02T12:42:21.353245111Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T12:42:21.353637915Z[Etc/UTC], eager-fox, START_TRACKING, previously tracking: false
+2025-12-02T12:51:11.712756153Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-02T12:51:19.594602389Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T12:51:19.595097194Z[Etc/UTC], fierce-koala, START_TRACKING, previously tracking: false
+2025-12-02T13:04:44.770204236Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-02T13:04:46.449734735Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T13:04:46.450133698Z[Etc/UTC], curious-eagle, STOP_TRACKING, previously tracking: true
+2025-12-02T13:10:27.675701137Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T13:10:27.676090141Z[Etc/UTC], fierce-koala, STOP_TRACKING, previously tracking: true
+2025-12-02T13:37:44.581313546Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T13:37:44.581752190Z[Etc/UTC], kind-hawk, STOP_TRACKING, previously tracking: true
+2025-12-02T15:12:58.414713282Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T15:12:58.415216487Z[Etc/UTC], fierce-koala, START_TRACKING, previously tracking: false
+2025-12-02T15:13:17.317555157Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T15:13:17.318098722Z[Etc/UTC], eager-fox, STOP_TRACKING, previously tracking: true
+2025-12-02T15:15:41.145991792Z[Etc/UTC], unknown, ACCESS, resource: /
+2025-12-02T15:34:02.004546137Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T15:34:02.004977741Z[Etc/UTC], fierce-koala, STOP_TRACKING, previously tracking: true
+2025-12-02T15:37:48.338626624Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-02T16:21:47.871695404Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-02T16:34:27.994049194Z[Etc/UTC], wise-fox, ACCESS, resource: /api/userId/state
+2025-12-02T17:07:25.627822600Z[Etc/UTC], unknown, ACCESS, resource: /
+2025-12-02T17:44:16.409761376Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-02T17:44:18.872864552Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T17:44:18.873325157Z[Etc/UTC], curious-eagle, START_TRACKING, previously tracking: false
+2025-12-02T17:46:23.987036033Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/state
+2025-12-02T17:46:24.001541966Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/state
+2025-12-02T17:46:34.303220773Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T17:46:34.303783898Z[Etc/UTC], lively-dolphin, START_TRACKING, previously tracking: false
+2025-12-02T17:53:39.359722259Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-02T17:53:43.041337609Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T17:53:43.041809253Z[Etc/UTC], gentle-bear, START_TRACKING, previously tracking: false
+2025-12-02T17:53:43.290740218Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-02T17:53:45.192417392Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T17:53:45.192916276Z[Etc/UTC], eager-dolphin, START_TRACKING, previously tracking: false
+2025-12-02T18:23:20.325543175Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T18:23:20.325965499Z[Etc/UTC], happy-fox, START_TRACKING, previously tracking: false
+2025-12-02T18:29:56.017612648Z[Etc/UTC], happy-fox, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T18:29:56.018028932Z[Etc/UTC], happy-fox, STOP_TRACKING, previously tracking: true
+2025-12-02T18:34:24.773959859Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T18:34:24.774344542Z[Etc/UTC], curious-eagle, STOP_TRACKING, previously tracking: true
+2025-12-02T18:52:56.490417191Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/state
+2025-12-02T18:53:09.157751817Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T18:53:09.158152541Z[Etc/UTC], quick-rabbit, START_TRACKING, previously tracking: false
+2025-12-02T19:03:03.357598521Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-02T19:03:06.357349194Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T19:03:06.357808678Z[Etc/UTC], kind-hawk, START_TRACKING, previously tracking: false
+2025-12-02T19:03:27.165236832Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/state
+2025-12-02T19:03:33.245926798Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T19:03:33.246355642Z[Etc/UTC], proud-koala, START_TRACKING, previously tracking: false
+2025-12-02T19:27:15.740286968Z[Etc/UTC], proud-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T19:27:15.740864494Z[Etc/UTC], proud-koala, STOP_TRACKING, previously tracking: true
+2025-12-02T19:29:19.972701825Z[Etc/UTC], quick-rabbit, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T19:29:19.973081148Z[Etc/UTC], quick-rabbit, STOP_TRACKING, previously tracking: true
+2025-12-02T19:40:06.776969597Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/state
+2025-12-02T19:40:11.546197323Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T19:40:11.546587287Z[Etc/UTC], fierce-bear, START_TRACKING, previously tracking: false
+2025-12-02T19:41:26.743762398Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/state
+2025-12-02T19:41:29.828371507Z[Etc/UTC], brave-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T19:41:29.828853151Z[Etc/UTC], brave-bear, START_TRACKING, previously tracking: false
+2025-12-02T19:43:17.655193006Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T19:43:17.655577810Z[Etc/UTC], lively-dolphin, STOP_TRACKING, previously tracking: true
+2025-12-02T19:43:17.820503952Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T19:43:17.820921396Z[Etc/UTC], lively-dolphin, START_TRACKING, previously tracking: false
+2025-12-02T19:43:18.561226699Z[Etc/UTC], lively-dolphin, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T19:43:18.561602822Z[Etc/UTC], lively-dolphin, STOP_TRACKING, previously tracking: true
+2025-12-02T19:51:08.396443189Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-02T19:51:11.469692722Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T19:51:11.470079646Z[Etc/UTC], kind-hawk, STOP_TRACKING, previously tracking: true
+2025-12-02T19:51:17.550991513Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-02T19:57:46.152846857Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-02T19:57:48.454437163Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T19:57:48.454934448Z[Etc/UTC], gentle-bear, STOP_TRACKING, previously tracking: true
+2025-12-02T20:22:57.764307039Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T20:22:57.764766163Z[Etc/UTC], eager-dolphin, STOP_TRACKING, previously tracking: true
+2025-12-02T20:33:28.076146925Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/state
+2025-12-02T21:00:10.437492327Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/state
+2025-12-02T21:15:21.533488602Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/state
+2025-12-02T21:15:34.816931739Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T21:15:34.817384223Z[Etc/UTC], proud-tiger, START_TRACKING, previously tracking: false
+2025-12-02T21:15:42.754037833Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-02T21:16:46.026044628Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T21:16:46.026426071Z[Etc/UTC], fierce-lion, START_TRACKING, previously tracking: false
+2025-12-02T21:22:17.446089663Z[Etc/UTC], eager-fox, ACCESS, resource: /api/userId/state
+2025-12-02T21:37:26.782054178Z[Etc/UTC], curious-eagle, ACCESS, resource: /api/userId/state
+2025-12-02T21:39:24.086778457Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T21:39:24.087147421Z[Etc/UTC], fierce-lion, STOP_TRACKING, previously tracking: true
+2025-12-02T21:40:10.179634938Z[Etc/UTC], fierce-bear, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T21:40:10.180044382Z[Etc/UTC], fierce-bear, STOP_TRACKING, previously tracking: true
+2025-12-02T21:47:15.032457225Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/state
+2025-12-02T21:47:25.495556293Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T21:47:25.495965817Z[Etc/UTC], fierce-lion, START_TRACKING, previously tracking: false
+2025-12-02T22:00:41.828767897Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T22:00:41.829217301Z[Etc/UTC], eager-dolphin, START_TRACKING, previously tracking: false
+2025-12-02T22:11:27.597464758Z[Etc/UTC], eager-dolphin, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T22:11:27.597917403Z[Etc/UTC], eager-dolphin, STOP_TRACKING, previously tracking: true
+2025-12-02T22:25:43.073786351Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/state
+2025-12-02T22:25:49.347826546Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/start_tracking
+2025-12-02T22:25:49.348217229Z[Etc/UTC], lively-lion, START_TRACKING, previously tracking: false
+2025-12-02T22:53:29.514184021Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T22:53:29.514716226Z[Etc/UTC], proud-tiger, STOP_TRACKING, previously tracking: true
+2025-12-02T22:53:33.413031315Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/state
+2025-12-02T22:53:42.380259739Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/state
+2025-12-02T23:15:56.964869848Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/state
+2025-12-02T23:15:57.845874438Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/stop_tracking
+2025-12-02T23:15:57.846330562Z[Etc/UTC], lively-lion, STOP_TRACKING, previously tracking: true
+2025-12-02T23:44:54.418083151Z[Etc/UTC], lively-lion, ACCESS, resource: /api/userId/state
+2025-12-02T23:49:52.916068836Z[Etc/UTC], proud-tiger, ACCESS, resource: /api/userId/state
+2025-12-03T01:08:47.835871520Z[Etc/UTC], fierce-lion, ACCESS, resource: /api/userId/stop_tracking
+2025-12-03T01:08:47.836219923Z[Etc/UTC], fierce-lion, STOP_TRACKING, previously tracking: true
+2025-12-03T07:55:17.152823736Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/state
+2025-12-03T07:55:37.986461074Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-03T07:55:37.986923518Z[Etc/UTC], fierce-koala, START_TRACKING, previously tracking: false
+2025-12-03T08:02:04.042243078Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-03T08:02:04.042626921Z[Etc/UTC], fierce-koala, STOP_TRACKING, previously tracking: true
+2025-12-03T08:58:50.512155242Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/start_tracking
+2025-12-03T08:58:50.512501485Z[Etc/UTC], fierce-koala, START_TRACKING, previously tracking: false
+2025-12-03T09:20:26.555710810Z[Etc/UTC], fierce-koala, ACCESS, resource: /api/userId/stop_tracking
+2025-12-03T09:20:26.556043013Z[Etc/UTC], fierce-koala, STOP_TRACKING, previously tracking: true
+2025-12-03T10:34:07.958261944Z[Etc/UTC], fierce-tiger, ACCESS, resource: /api/userId/state
+2025-12-03T10:34:11.964233017Z[Etc/UTC], fierce-tiger, ACCESS, resource: /api/userId/start_tracking
+2025-12-03T10:34:11.964594380Z[Etc/UTC], fierce-tiger, START_TRACKING, previously tracking: false
+2025-12-03T11:17:15.648213067Z[Etc/UTC], fierce-tiger, ACCESS, resource: /api/userId/stop_tracking
+2025-12-03T11:17:15.648550270Z[Etc/UTC], fierce-tiger, STOP_TRACKING, previously tracking: true
+2025-12-03T11:55:03.301862236Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/state
+2025-12-03T11:55:07.105220732Z[Etc/UTC], kind-hawk, ACCESS, resource: /api/userId/start_tracking
+2025-12-03T11:55:07.105560935Z[Etc/UTC], kind-hawk, START_TRACKING, previously tracking: false
+2025-12-03T12:21:37.942203548Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/state
+2025-12-03T12:21:43.502509352Z[Etc/UTC], gentle-bear, ACCESS, resource: /api/userId/start_tracking
+2025-12-03T12:21:43.502946196Z[Etc/UTC], gentle-bear, START_TRACKING, previously tracking: false

@@ -14,10 +14,10 @@ to start the server, run:
 ```
 then open your browser at http://localhost:8080
 
-# Planned:
+## backing up server log:
+```bash
+scp ubuntu@wasabi.science:~/urm25/data/server.log server.log.backup
+```
 
-- HTMX for interaction
-- /api route for setting/retriving state
-- json file for state
 
 
