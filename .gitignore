@@ -215,3 +215,6 @@ out/
 mill
 .vscode/
 
+
+# other
+transcription/

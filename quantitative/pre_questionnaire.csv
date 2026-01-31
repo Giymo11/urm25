@@ -1,0 +1,21 @@
+ID,Startzeit,Fertigstellungszeit,nickname,gender,age,What is your employment status?,How often do you pursue your hobbies?,estimated_average,hobby_sessions,How often do you pursue a specific hobby you only engage in with a friend/friends?,Do you preschedule regular hobbies?,comf_taking_time,Rate this statement: I often use my hobbies as a way to postpone other things I need to do.,"Rate this statement: After doing my hobbies, I generally feel positive."
+2,11.30.25 17:17:28,11.30.25 17:19:49,kind-hawk,Female,24,Full-time Student,At least 2 times per Week,30,2,Weekly,No,Agree,Strongly disagree,Agree
+3,11.30.25 17:18:13,11.30.25 17:21:16,proud-rabbit,Male,25,Weekly Employment between 10-25 hours,Weekly,15,1,Monthly,No,Strongly disagree,Neutral,Disagree
+4,11.30.25 17:25:14,11.30.25 17:31:11,quick-rabbit,Female,24,Unemployment,At least 2 times per Week,60,60,Daily,No,Agree,Agree,Agree
+5,11.30.25 17:25:05,11.30.25 17:31:44,curious-eagle,Female,27,Weekly Employment above 25 hours,At least 2 times per Week,150,1,Monthly,Yes,Strongly agree,Strongly disagree,Agree
+6,11.30.25 17:26:32,11.30.25 17:32:54,eager-dolphin,Male,27,Weekly Employment below 10 hours,Daily,90,2,Weekly,Yes,Neutral,Agree,Agree
+7,11.30.25 17:25:55,11.30.25 17:33:39,lively-dolphin,Male,21,Weekly Employment below 10 hours,At least 2 times per Week,60,2,Weekly,Yes,Agree,Agree,Agree
+8,11.30.25 17:36:29,11.30.25 17:50:21,happy-fox,Prefer not to say,33,Full-time Student,At least 2 times per Week,30,1,Less than once a Month,Yes,Agree,Disagree,Neutral
+9,11.30.25 18:07:14,11.30.25 18:10:21,proud-koala,Female,21,Full-time Student,Weekly,90,1,Monthly,No,Neutral,Strongly disagree,Strongly agree
+10,11.30.25 18:16:35,11.30.25 18:19:41,lively-wolf,Female,27,Weekly Employment above 25 hours,Weekly,45,1,Less than once a Month,No,Agree,Disagree,Strongly agree
+11,11.30.25 18:20:56,11.30.25 18:23:45,gentle-panda,Male,28,Weekly Employment above 25 hours,Daily,20,1,Less than once a Month,Yes,Strongly agree,Agree,Agree
+12,11.30.25 18:23:04,11.30.25 18:24:34,fierce-bear,Female,23,Weekly Employment below 10 hours,Daily,100,2,Less than once a Month,No,Strongly agree,Strongly agree,Strongly agree
+13,11.30.25 18:23:53,11.30.25 18:26:49,fierce-lion,Female,24,Unemployed,Daily,240,2,At least 2 times per Week,No,Strongly agree,Agree,Strongly agree
+14,11.30.25 19:36:34,11.30.25 19:39:19,fierce-koala,Male,24,Weekly Employment below 10 hours,Daily,30,2,Weekly,Yes,Strongly agree,Disagree,Strongly agree
+15,11.30.25 19:58:03,11.30.25 20:03:55,fierce-tiger,Female,20,Weekly Employment below 10 hours,At least 2 times per Week,90,1,Monthly,Yes,Neutral,Disagree,Agree
+16,11.30.25 21:40:32,11.30.25 21:44:03,gentle-bear,Non-binary,20,Full-time Student,At least 2 times per Week,90,3,Weekly,Yes,Agree,Disagree,Strongly agree
+17,11.30.25 21:48:28,11.30.25 21:55:55,proud-tiger,Female,24,Unemployed,Daily,210,2,Monthly,No,Agree,Agree,Neutral
+18,11.30.25 22:42:55,11.30.25 22:43:01,wise-fox,Male,27,Full-time Student,Weekly,200,1,Weekly,Yes,Strongly agree,Agree,Strongly agree
+19,11.30.25 22:53:35,11.30.25 22:56:17,lively-lion,Female,21,Weekly Employment between 10-25 hours,At least 2 times per Week,60,1,At least 2 times per Week,No,Agree,Neutral,Agree
+20,11.30.25 23:15:46,11.30.25 23:18:28,eager-fox,Female,24,Weekly Employment below 10 hours,Daily,120,3,Less than once a Month,Yes,Agree,Strongly agree,Neutral
+21,12.1.25 1:19:48,12.1.25 1:22:39,brave-bear,Male,21,Weekly Employment between 10-25 hours,Daily,180,2,At least 2 times per Week,No,Neutral,Strongly disagree,Agree
