@@ -75,28 +75,10 @@ def two_sample_t_test(N1, N2, M1, M2):
     print("p-value = " + str(p_val))
 
 
-
-
 def main():
 
     users = buildDataForStatistics()
-
-    sample_dict = { 
-        "daniel": {
-            "schedule": "AABAB",
-            "entries": ["a", "b", "c"]
-        }
-    }
-
-    print(sample_dict)
-
-    entry = sample_dict.get("daniel")
-    entry["xpp"] = "xdd"
-    sample_dict["daniel"] = entry
-
-    print(sample_dict)
-
-
+    print(users)
 
 
 if __name__=="__main__":
